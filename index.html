@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 80vw;
+      line-height: 10vh;
+      font-size: 1.5rem;
+      margin: 0 auto;
+      background-color: rgba(228, 222, 222, 0.8);
+    }
+
+    @media only screen and (max-width: 1600px) and (min-width: 1280px) {
+      html {
+        font-size: 10px;
+      }
+    }
+
+    @media only screen and (max-width: 1280px) and (min-width: 960px) {
+      html {
+        font-size: 9.8px;
+      }
+    }
+
+    @media only screen and (max-width: 960px) {
+      html {
+        font-size: 9.5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <p> 视口布局的优点：宽度和高度全部自动适应！再加上rem布局的字体适应，可以完美解决各种屏幕适配问题！</p>
+
+    <ul>
+      <li> 1、vw、vh是基于视口的布局方案，故这个meta元素的视口必须声明。（解决宽高自动适配）
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      </li>
+      <li> 2、rem布局-解决字体适配（此布局在weex中无法识别）
+
+        rem布局原理：根据CSS的媒体查询功能，更改html根字体大小，实现字体大小随屏幕尺寸变化。
+        上面代码中的50vw代表了 此div占据视口宽度的50%、高度占据视口高度的20%，并且会随着视口的变化，进行自适应;
+
+        字体则是1.5倍的html根字体大小。并且根据媒体查询进行字号变化。</li>
+      <li>3、vw、vh、rem的使用
+        使用vw+vh+rem的布局之外，可以再加上elementUI的栅格布局，可以轻松、快速的搭配出真正的响应式布局，但要注意浏览器的兼容性问题！
+      </li>
+    </ul>
+rem解决字体适配vw vh视口布局
+  </div>
+</body>
+
+</html>
